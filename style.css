@@ -1,0 +1,112 @@
+body {
+    font-family: 'Space Mono', monospace;
+    margin: 0;
+}
+
+#background {
+    /* main 3x3 grid for layout */
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+
+    /* gradient background */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: linear-gradient(45deg, #F17C58, #E94584, #24AADB, #27DBB1, #FFDC18, #FF3706);
+    background-size: 600% 100%;
+    animation: gradient 25s linear infinite;
+    animation-direction: alternate;
+}
+
+/* animation for background */
+@keyframes gradient {
+    0% {
+        background-position: 0%
+    }
+
+    100% {
+        background-position: 100%
+    }
+}
+
+#container {
+    /* div location within main background grid */
+    grid-column: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 50px;
+    width: 500px;
+    height: 200px;
+    background-color: #ffffff25;
+
+    /* creating nested grid within our grid */
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto auto;
+
+    box-shadow: 10px 10px 16px 10px #69686865;
+
+}
+
+h1 {
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff60;
+}
+
+#ouputs {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#buttons {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+button {
+    font-family: 'Space Mono', monospace;
+    background: #ffffff40;
+    color: #ffffff80;
+    border: none;
+    margin: 0px 10px 0px 10px;
+    transition: all .2s ease-in-out;
+}
+
+button:hover {
+    background: #ffffff00;
+    color: whitesmoke;
+    font-weight: bold;
+
+}
+
+input {
+    background: #ffffff00;
+    color: #ffffff90;
+    border: none;
+    width: 50px;
+    font-weight: bold;
+}
